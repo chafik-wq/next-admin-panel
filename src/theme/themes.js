@@ -4,4 +4,5 @@ export const LightBlue = {
     p: '#FFFFFF',
     s: '#039BE5',
     t: '#F57C00',
+    text: '#000000'
 }

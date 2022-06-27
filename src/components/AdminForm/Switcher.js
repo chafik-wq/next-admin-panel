@@ -1,6 +1,9 @@
 import React from 'react'
 
 import { AdminPanelRootsContext } from './../../contexts/AdminPanelRootsContext'
+import HomeComponent from './ContentComponents/HomeComponent';
+import AdminsComponent from './ContentComponents/AdminsComponent'
+import UsersComponent from './ContentComponents/UsersComponent'
 
 const Switcher = () => {
 
@@ -9,7 +12,13 @@ const Switcher = () => {
   return (
     <>
     {
-        root == "Home" ? <h1>Home</h1> : <h1>Admins</h1>
+      root == "Home" ? <HomeComponent /> : null
+    }
+    {
+      root == "Admins" ? <AdminsComponent /> : null
+    }
+    {
+      root == "Users" ? <UsersComponent /> : null
     }
     </>
   )
