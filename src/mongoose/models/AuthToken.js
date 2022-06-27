@@ -7,6 +7,6 @@ var AuthTokenSchema = new mongoose.Schema({
     adminEmail: {
         type: String,
     }
-}, { timestamps: true })
+}, { timestamps: true }) 
 
 module.exports = mongoose.models.authTokens || mongoose.model('authTokens', AuthTokenSchema);

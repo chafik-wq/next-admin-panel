@@ -4,7 +4,7 @@ import axios from 'axios'
 
 const LoginAdmin = (email , password , setErrors) => {
   try{
-    axios.post('/api/Login' , {
+    axios.post(`${process.env.Domain}/api/Login` , {
       adminEmail: email,
       adminPassword: password,
     }).then((res) => {

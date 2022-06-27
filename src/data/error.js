@@ -6,8 +6,12 @@ const wrongPassword = {
     code: '102',
     message: 'Wrong password'
 }
+const notAllowed = {
+    code: '103',
+    message: 'Not allowed'
+}
 const errorInServer = {
-    cose: '500',
+    code: '500',
     message: 'Error in the server'
 }
 
