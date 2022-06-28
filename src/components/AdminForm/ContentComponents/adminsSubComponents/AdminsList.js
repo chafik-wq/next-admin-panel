@@ -6,6 +6,9 @@ import AdminPanelSettingsRoundedIcon from '@mui/icons-material/AdminPanelSetting
 import GetAdminsData from './../../../../utils/GetAdminsData'
 import AdminsInfoDialog from './AdminsActionsPopUp/AdminInfoDialog'
 import AdminsDeleteDialog from './AdminsActionsPopUp/AdminDeleteDialog'
+import Skeleton from '@mui/material/Skeleton';
+import Stack from '@mui/material/Stack';
+
 
 import Grow from '@mui/material/Grow';
 
@@ -32,7 +35,13 @@ const AdminsList = () => {
   }, [])
 
   if(loading) {
-    return 
+    return (
+      <Stack sx={{ width: '100%', maxWidth: '100%', bgcolor: 'background.paper' , my : '15px'}}>
+        <Skeleton variant="text" width={"10%"} height={38}/>
+        <Skeleton sx={{ margin: '5px auto 5px auto' }} variant="rectangular" width={"80%"} height={40} />
+        <Skeleton sx={{ margin: '5px auto 5px auto' }} variant="rectangular" width={"80%"} height={40} />
+      </Stack>
+    )
   }
 
   return (
