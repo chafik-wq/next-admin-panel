@@ -1,17 +1,27 @@
 import React from 'react'
 
-import { Grid , Box , TextField } from '@mui/material';
-import { InputAdornment , IconButton }  from "@material-ui/core";
-import SearchIcon from "@material-ui/icons/Search";
+import { Grid , TextField } from '@mui/material';
+import { ThemeContext } from './../../contexts/ThemeContext';
 
 const ContentHeader = () => {
+
+  const { theme } = React.useContext(ThemeContext);
+
+
   return (
-    <Grid className="AdminForm-ContentContainer-Nav">
+    <Grid style={{backgroundColor: theme.p}} className="AdminForm-ContentContainer-Nav">
         <TextField 
           label="Search"
-          variant="filled" 
+          variant="filled"
+          color="primary"
+          sx={{ 
+            input: { 
+              color: theme.text , 
+              borderBottom: '2px solid ' + theme.text,
+              width: 400,
+            } , "label": {color: theme.text } 
+        }}
         >
-          <SearchIcon />
         </TextField>
 
     </Grid>

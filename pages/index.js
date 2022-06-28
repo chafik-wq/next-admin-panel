@@ -5,8 +5,12 @@ import CheckIfLoggin from './../src/utils/CheckIfLoggin'
 import { Box } from '@mui/material';
 import Main from '../src/components/AdminForm/Main'
 import AdminPanelRootsContextProvider from './../src/contexts/AdminPanelRootsContext'
+import { ThemeContext } from './../src/contexts/ThemeContext';
 
 export default function Home() {
+
+  
+  const { theme } = React.useContext(ThemeContext);
 
   React.useEffect(() => {
     CheckIfLoggin()
@@ -23,6 +27,7 @@ export default function Home() {
         justifyContent="center"
         alignItems="center"
         minHeight="100vh"
+        style={{color : theme.text}}
       >
         <AdminPanelRootsContextProvider>
           <Main />

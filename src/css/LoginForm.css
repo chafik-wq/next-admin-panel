@@ -19,6 +19,7 @@
     justify-content: center;
     align-items: center;
     overflow: auto;
+    overflow: hidden;
 }     
 .AdminForm-Nav-Button {
     width: 90% ;
@@ -37,6 +38,6 @@
     width: 100%;
     height: 70px;
     padding: 5px 0 5px 0;
-    background-color: #fff;
+    margin: 5px 0 0 0 ;
     border-top-right-radius: 10px;
 }
