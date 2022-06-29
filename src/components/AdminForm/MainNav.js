@@ -8,10 +8,13 @@ import adminPanelRoots from './../../data/adminPanelRoots'
 import { ThemeContext } from './../../contexts/ThemeContext';
 import { AdminPanelRootsContext } from './../../contexts/AdminPanelRootsContext'
 import Divider from '@mui/material/Divider';
-import { useThemeProps } from '@mui/material';
+//import { useThemeProps } from '@mui/material';
+import LogoutPopUp from './GlobalPopUp/LogoutPopUp';
 
 const MainNav = () => {
 
+
+    const [ LogoutDialog,setLogoutDialog ] = React.useState(false)
     
     const { theme } = React.useContext(ThemeContext);
     const { root , setRoot } = React.useContext(AdminPanelRootsContext);
@@ -47,11 +50,12 @@ const MainNav = () => {
                     })
                 }
             </ListItem>
-                <Divider style={{width:'80%'}}/>
-                <ListItemButton color="success" sx={{ my: 1.5 , mx: 5,width: '90%' , borderRadius: '5px' , maxHeight: '50px'  }} >
-                    <LogoutRoundedIcon sx={{  mx: 2 }}/>
-                    <ListItemText primary={`Logout`} />
-                </ListItemButton>
+            <Divider style={{width:'80%'}}/>
+            <ListItemButton onClick={() => setLogoutDialog(true)} color="success" sx={{ my: 1.5 , mx: 5,width: '90%' , borderRadius: '5px' , maxHeight: '50px'  }} >
+                <LogoutRoundedIcon sx={{  mx: 2 }}/>
+                <ListItemText primary={`Logout`} />
+            </ListItemButton>
+            <LogoutPopUp state={{LogoutDialog,setLogoutDialog}}/>
         </>
     )
 }

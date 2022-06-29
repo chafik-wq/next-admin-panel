@@ -1,10 +1,12 @@
 import React from 'react'
 
+import { Grid } from '@mui/material'
+
 const HomeComponent = () => {
   return (
-    <div>
-        HomeComponent
-    </div>
+    <Grid container justifyContent="center" alignItems="center" minHeight="100vh">
+      HomeComponent
+    </Grid>
   )
 }
 

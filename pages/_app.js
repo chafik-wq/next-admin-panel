@@ -1,14 +1,17 @@
 import '../styles/globals.css'
 import './../src/css/LoginForm.css'
 import ThemeContextProvider from './../src/contexts/ThemeContext'
+import { CookiesProvider } from 'react-cookie';
 
 function MyApp({ Component, pageProps }) {
 
 
   return (
-    <ThemeContextProvider>
-        <Component {...pageProps} />
-    </ThemeContextProvider>
+    <CookiesProvider>
+      <ThemeContextProvider>
+          <Component {...pageProps} />
+      </ThemeContextProvider>
+    </CookiesProvider>
   )
 }
 

@@ -11,7 +11,7 @@ const ContentHeader = () => {
   const { root , setRoot } = React.useContext(AdminPanelRootsContext);
 
   return (
-    <Grid direction="row" style={{backgroundColor: theme.p}} className="AdminForm-ContentContainer-Nav">
+    <Grid direction="row" style={{backgroundColor: theme.p }} className="AdminForm-ContentContainer-Nav">
         <TextField 
           label="Search"
           variant="filled"

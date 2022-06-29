@@ -1,9 +1,11 @@
 import dbConnect from './../../../src/mongoose/connect/Connect';
-import AuthTokenSchema from './../../../src/mongoose/models/AuthToken'
+//import AuthTokenSchema from './../../../src/mongoose/models/AuthToken'
 import errors from './../../../src/data/error'
 import success from './../../../src/data/success'
 import AdminsSchema from './../../../src/mongoose/models/AdminAccount';
 import { CheckIfLogged } from './../Security/Allowed'
+import bcrypt from 'bcrypt'
+
 
 export default async function handler(req, res) {
 
@@ -23,13 +25,11 @@ export default async function handler(req, res) {
             })
         }
 
-
         else if (req.method == 'POST') {
             // Get Data From req
             let adminName = req.body.adminName
             let adminEmail = req.body.adminEmail;
             let adminPassword = req.body.adminPassword;
-
 
             try {
                 const salt = await bcrypt.genSalt(10)
@@ -48,6 +48,7 @@ export default async function handler(req, res) {
                 });
             
             }catch(err) {
+                console.log(err)
                 res.status(500).json(errors.errorInServer)
             }
         }
