@@ -2,14 +2,16 @@ import React from 'react'
 
 import { Grid , TextField } from '@mui/material';
 import { ThemeContext } from './../../contexts/ThemeContext';
+import { AdminPanelRootsContext } from './../../contexts/AdminPanelRootsContext'
+import AdminsHeaderItems from './HeaderItems/AdminsHeaderItems';
 
 const ContentHeader = () => {
 
   const { theme } = React.useContext(ThemeContext);
-
+  const { root , setRoot } = React.useContext(AdminPanelRootsContext);
 
   return (
-    <Grid style={{backgroundColor: theme.p}} className="AdminForm-ContentContainer-Nav">
+    <Grid direction="row" style={{backgroundColor: theme.p}} className="AdminForm-ContentContainer-Nav">
         <TextField 
           label="Search"
           variant="filled"
@@ -23,7 +25,7 @@ const ContentHeader = () => {
         }}
         >
         </TextField>
-
+        { root == 'Admins' ? <AdminsHeaderItems /> : null}
     </Grid>
   )
 }

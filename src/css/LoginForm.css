@@ -40,4 +40,20 @@
     padding: 5px 0 5px 0;
     margin: 5px 0 0 0 ;
     border-top-right-radius: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.AdminsForm-Header {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.AdminsForm-Header-AddNewAdminButton {
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
 }
