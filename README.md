@@ -45,5 +45,32 @@ and then send the following data in the body
 ```
 ```diff
 - remove this endpoint in production 
-+ and use the save endpoint insted by sending post request for /api/admins , auth is required
++ and use the safe endpoint insted by sending post request for /api/admins , auth is required
+```
+
+
+<br/>
+<br/>
+
+
+# **Fork or Follow , or both** 😁 <br/>
+<br/>
+<br/>
+
+
+
+```diff
++ You have all the permission to add , edite , or remove a component 
+```
+
+<br/>
+
+```diff
+! Contact us if you founded a bug please
+```
+
+<br/>
+
+```diff
++ you can lie and say that this dashboard is your own
 ```
