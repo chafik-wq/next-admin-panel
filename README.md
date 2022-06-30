@@ -1,3 +1,3 @@
-Next release idea 
-// Add show and hide in the password input next release
-// Check the validation of the new admin informations
+# **Next admin panel**
+## **How To Use**
+![Next admin panel](https://github.com/Chafik321/next-admin-panel/show/1.png)
